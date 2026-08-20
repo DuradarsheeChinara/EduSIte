@@ -1,4 +1,19 @@
 import type { SubjectId } from '@/types';
+import moruMayurImage from '../../Core character assets/character_moru_mayur.png';
+import gyaanGajImage from '../../Core character assets/character_gyaan_gaj.png';
+import tinkaTotaImage from '../../Core character assets/character_tinku_tota.png';
+import mistriGendaImage from '../../Core character assets/character_bablu_buffallo.png';
+import gintiGilahariImage from '../../Core character assets/character_ginti_gilhari.png';
+import jugnuByteImage from '../../Core character assets/character_jugnu_byte.png';
+
+const MASCOT_IMAGES: Partial<Record<SubjectId, string>> = {
+  biology: moruMayurImage,
+  chemistry: gyaanGajImage,
+  technology: tinkaTotaImage,
+  engineering: mistriGendaImage,
+  mathematics: gintiGilahariImage,
+  coding: jugnuByteImage,
+};
 
 interface MascotProps {
   subject: SubjectId;
@@ -8,14 +23,17 @@ interface MascotProps {
 
 export function Mascot({ subject, className = '', size = 120 }: MascotProps) {
   const props = { width: size, height: size, className, viewBox: '0 0 200 200', xmlns: 'http://www.w3.org/2000/svg' };
+  const image = MASCOT_IMAGES[subject];
+
+  if (image) {
+    return <img src={image} alt="" width={size} height={size} className={`${className} object-contain`} />;
+  }
 
   switch (subject) {
     case 'biology':
       return <PeacockMascot {...props} />;
     case 'chemistry':
       return <ElephantMascot {...props} />;
-    case 'physics':
-      return <DonkeyMascot {...props} />;
     case 'technology':
       return <ParrotMascot {...props} />;
     case 'engineering':
@@ -24,6 +42,8 @@ export function Mascot({ subject, className = '', size = 120 }: MascotProps) {
       return <SquirrelMascot {...props} />;
     case 'coding':
       return <BeeMascot {...props} />;
+    case 'physics':
+      return <DonkeyMascot {...props} />;
   }
 }
 
