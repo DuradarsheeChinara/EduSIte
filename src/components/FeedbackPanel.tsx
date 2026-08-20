@@ -1,4 +1,11 @@
 import { CheckCircle2, XCircle } from 'lucide-react';
+import correctRemarkImage from '../../game feedbacks [part l]/remark_correct.jpeg';
+import notQuiteRemarkImage from '../../game feedbacks [part l]/remark_not_quite.jpeg';
+
+const REMARK_IMAGES = {
+  correct: correctRemarkImage,
+  incorrect: notQuiteRemarkImage,
+};
 
 interface FeedbackPanelProps {
   isCorrect: boolean;
@@ -7,6 +14,8 @@ interface FeedbackPanelProps {
 }
 
 export function FeedbackPanel({ isCorrect, correctAnswer, explanation }: FeedbackPanelProps) {
+  const remarkImage = isCorrect ? REMARK_IMAGES.correct : REMARK_IMAGES.incorrect;
+
   return (
     <div
       className={`p-5 rounded-2xl border-2 animate-pop-in ${
@@ -23,6 +32,7 @@ export function FeedbackPanel({ isCorrect, correctAnswer, explanation }: Feedbac
         ) : (
           <XCircle className="w-7 h-7 text-terracotta-600 flex-shrink-0 mt-0.5" />
         )}
+        <img src={remarkImage} alt="" className="h-20 w-28 flex-shrink-0 rounded-xl object-cover" />
         <div className="flex-1">
           <p
             className={`font-bold text-lg ${
