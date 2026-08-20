@@ -1,6 +1,15 @@
 import type { World, GameProgress } from '@/types';
 import { Mascot } from './Mascot';
 import { Lock, CheckCircle2, Play, ArrowRight } from 'lucide-react';
+import lockedGateImage from '../../mission state graphics[part f]/score_stts_door_lock_path.jpeg';
+import completedGateImage from '../../mission state graphics[part f]/score_stts_perfect_correct.jpeg';
+import unlockedGateImage from '../../mission state graphics[part f]/score_stts_retry_nxtmission.jpeg';
+
+const MISSION_STATE_IMAGES = {
+  locked: lockedGateImage,
+  unlocked: unlockedGateImage,
+  completed: completedGateImage,
+};
 
 interface MissionCardProps {
   world: World;
@@ -16,6 +25,7 @@ export function MissionCard({ world, progress, index, onEnter }: MissionCardProp
     (prereq) => progress.worlds[prereq].completed
   );
   const isLocked = !prerequisitesMet && !isCompleted;
+  const missionState = isLocked ? 'locked' : isCompleted ? 'completed' : 'unlocked';
 
   const colorClasses: Record<string, { bg: string; border: string; text: string; gradient: string }> = {
     forest: {
@@ -96,6 +106,11 @@ export function MissionCard({ world, progress, index, onEnter }: MissionCardProp
 
         {/* Status / Action button */}
         <div className="mt-4 w-full">
+          <img
+            src={MISSION_STATE_IMAGES[missionState]}
+            alt=""
+            className="mx-auto mb-2 h-16 w-24 object-contain"
+          />
           {isLocked ? (
             <div className="flex items-center justify-center gap-1.5 px-4 py-2.5 bg-stone-200 text-stone-500 font-semibold rounded-xl text-sm">
               <Lock className="w-4 h-4" />
