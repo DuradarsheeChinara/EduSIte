@@ -5,6 +5,7 @@ import tinkaTotaImage from '../../Core character assets/character_tinku_tota.png
 import mistriGendaImage from '../../Core character assets/character_bablu_buffallo.png';
 import gintiGilahariImage from '../../Core character assets/character_ginti_gilhari.png';
 import jugnuByteImage from '../../Core character assets/character_jugnu_byte.png';
+import bholuDonkeyImage from '../../Core character assets/character_bholu_the_donkey.png';
 
 const MASCOT_IMAGES: Partial<Record<SubjectId, string>> = {
   biology: moruMayurImage,
@@ -13,6 +14,7 @@ const MASCOT_IMAGES: Partial<Record<SubjectId, string>> = {
   engineering: mistriGendaImage,
   mathematics: gintiGilahariImage,
   coding: jugnuByteImage,
+  physics: bholuDonkeyImage,
 };
 
 interface MascotProps {
