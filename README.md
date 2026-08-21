@@ -79,15 +79,19 @@ This is a design choice, not decoration: Indian visual art traditions are among 
 
 ## Multilingual Support
 
-STEM Yatra is built to reach students beyond an English-only audience, with in-app translation covering major Indian languages including Bengali, Odia, and Tamil — so the same missions, mascots, and SDG framing stay accessible regardless of a learner's first language.
+STEM Yatra is built to reach students beyond an English-only audience, with in-app translation covering major Indian languages including Bengali, Odia, Tamil, Kannada, and Telugu — so the same missions, mascots, and SDG framing stay accessible regardless of a learner's first language.
 
 | Bengali | Odia |
 |---|---|
 | ![STEM Yatra in Bengali](./WhatsApp%20Image%202026-08-20%20at%2011.55.53%20PM.jpeg) | ![STEM Yatra in Odia](./WhatsApp%20Image%202026-08-20%20at%2011.57.15%20PM.jpeg) |
 
-| Tamil |
+| Tamil | Kannada |
+|---|---|
+| ![STEM Yatra in Tamil](./WhatsApp%20Image%202026-08-20%20at%2011.58.45%20PM.jpeg) | ![STEM Yatra in Kannada](./kannad.jpeg) |
+
+| Telugu |
 |---|
-| ![STEM Yatra in Tamil](./WhatsApp%20Image%202026-08-20%20at%2011.58.45%20PM.jpeg) |
+| ![STEM Yatra in Telugu](./telugu.jpeg) |
 
 ## SDG Alignment
 
