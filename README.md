@@ -83,13 +83,11 @@ STEM Yatra is built to reach students beyond an English-only audience, with in-a
 
 | Bengali | Odia |
 |---|---|
-| ![STEM Yatra in Bengali](./WhatsApp%20Image%202026-08-20%20at%2011.55.53%20PM.jpg) | ![STEM Yatra in Odia](./WhatsApp%20Image%202026-08-20%20at%2011.57.15%20PM.jpg) |
+| ![STEM Yatra in Bengali](./WhatsApp%20Image%202026-08-20%20at%2011.55.53%20PM.jpeg) | ![STEM Yatra in Odia](./WhatsApp%20Image%202026-08-20%20at%2011.57.15%20PM.jpeg) |
 
 | Tamil |
 |---|
-| ![STEM Yatra in Tamil](./WhatsApp%20Image%202026-08-20%20at%2011.58.45%20PM.jpg) |
-
----
+| ![STEM Yatra in Tamil](./WhatsApp%20Image%202026-08-20%20at%2011.58.45%20PM.jpeg) |
 
 ## SDG Alignment
 
