@@ -2,8 +2,10 @@ import type { GameProgress } from '@/types';
 import { WORLDS } from '@/data/worlds';
 import { MissionCard } from '@/components/MissionCard';
 import { ProgressBar } from '@/components/ProgressBar';
+import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { Trophy, RotateCcw, Sparkles, BookOpen, GraduationCap, Wrench, Scale } from 'lucide-react';
 import { useState } from 'react';
+import completionPercent from '../../UI icons[part e]/Completion percent.jpeg';
 
 interface VillageMapProps {
   progress: GameProgress;
@@ -50,6 +52,7 @@ export function VillageMap({ progress, onEnterWorld, onReset, onCelebrate }: Vil
 
   return (
     <div className="min-h-screen village-texture">
+      <AnimatedBackground src="animated_backgroundhomepage.html" />
       {/* Decorative top border */}
       <div className="folk-border-top w-full" />
 
@@ -88,7 +91,7 @@ export function VillageMap({ progress, onEnterWorld, onReset, onCelebrate }: Vil
           {/* Overall Progress */}
           <div className="bg-white rounded-2xl p-4 card-shadow border-2 border-cream-200">
             <div className="flex items-center gap-2 mb-2">
-              <Trophy className="w-5 h-5 text-saffron-500" />
+              <img src={completionPercent} alt="" className="w-5 h-5" />
               <span className="font-bold text-stone-700 text-sm">Overall Progress</span>
             </div>
             <ProgressBar current={completedCount} total={WORLDS.length} color="bg-gradient-to-r from-saffron-400 to-terracotta-500" />

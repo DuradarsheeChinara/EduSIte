@@ -96,7 +96,7 @@ export function ChemicalDetective({ world, onComplete, onExit }: ChemicalDetecti
   // Reactor activation overlay
   if (phase === 'reactor') {
     return (
-      <div className="min-h-screen relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FED7AA 0%, #FDBA74 25%, #FFEDD5 60%, #FFF7ED 100%)' }}>
+      <div className="min-h-screen relative overflow-hidden" style={{ background: 'transparent' }}>
         <div className="folk-border-top w-full relative z-30" />
         <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b-2 border-cream-200 px-3 py-2.5">
           <div className="flex items-center gap-3">

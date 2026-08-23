@@ -60,7 +60,7 @@ export function DataCodeLab({ world, onComplete, onExit }: DataCodeLabProps) {
   // Automation overlay
   if (phase === 'automation') {
     return (
-      <div className="min-h-screen relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #99F6E4 0%, #5EEAD4 25%, #CCFBF1 60%, #F0FDFA 100%)' }}>
+      <div className="min-h-screen relative overflow-hidden" style={{ background: 'transparent' }}>
         <div className="folk-border-top w-full relative z-30" />
         <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b-2 border-cream-200 px-3 py-2.5">
           <div className="flex items-center gap-3">

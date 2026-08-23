@@ -6,6 +6,7 @@ import { MathsExplorer } from '@/worlds/MathsExplorer';
 import { TechWorkshop } from '@/worlds/TechWorkshop';
 import { EngineeringHub } from '@/worlds/EngineeringHub';
 import { DataCodeLab } from '@/worlds/DataCodeLab';
+import { AnimatedBackground } from '@/components/AnimatedBackground';
 
 interface MissionViewProps {
   world: World;
@@ -21,6 +22,16 @@ const WORLD_COMPONENTS: Record<SubjectId, React.ComponentType<{ world: World; on
   technology: TechWorkshop,
   engineering: EngineeringHub,
   coding: DataCodeLab,
+};
+
+const WORLD_BACKGROUNDS: Record<SubjectId, string> = {
+  biology: '1_bio_detective.html',
+  chemistry: '2_chemical_detective.html',
+  physics: '3_circuit_rescue.html',
+  mathematics: '4_maths_explorer.html',
+  technology: '5_tech_workshop.html',
+  engineering: '6_engineering_hub.html',
+  coding: '7_data_and_code_lab.html',
 };
 
 export function MissionView({ world, onComplete, onExit }: MissionViewProps) {
@@ -39,5 +50,10 @@ export function MissionView({ world, onComplete, onExit }: MissionViewProps) {
     );
   }
 
-  return <GameComponent world={world} onComplete={(score) => onComplete(score, world.recap)} onExit={onExit} />;
+  return (
+    <>
+      <AnimatedBackground src={WORLD_BACKGROUNDS[world.id]} />
+      <GameComponent world={world} onComplete={(score) => onComplete(score, world.recap)} onExit={onExit} />
+    </>
+  );
 }

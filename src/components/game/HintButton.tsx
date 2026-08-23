@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Lightbulb } from 'lucide-react';
 import { useState } from 'react';
+import hintIcon from '../../../UI icons[part e]/hint icon.jpeg';
 
 interface HintButtonProps {
   hint: string;
@@ -28,7 +28,7 @@ export function HintButton({ hint, accentColor = 'saffron' }: HintButtonProps) {
         className={`flex items-center gap-1.5 px-3 py-2 ${colors.bg} ${colors.text} font-semibold rounded-xl border-2 ${colors.border} text-xs shadow-sm`}
         aria-expanded={show}
       >
-        <Lightbulb className="w-4 h-4" />
+        <img src={hintIcon} alt="" className="w-4 h-4" />
         {show ? 'Hide' : 'Hint'}
       </motion.button>
       {show && (

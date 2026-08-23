@@ -76,7 +76,7 @@ export function MissionShell({
   }
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ background: bg }}>
+    <div className="min-h-screen relative overflow-hidden" style={{ background: 'transparent' }}>
       {/* Decorative top border */}
       <div className="folk-border-top w-full relative z-30" />
 

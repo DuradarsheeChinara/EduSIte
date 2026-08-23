@@ -188,15 +188,7 @@
 
 /* Village map texture */
 .village-texture {
-  background-color: #F5ECD4;
-  background-image: 
-    url('/background.png'),
-    radial-gradient(ellipse at 20% 30%, rgba(22, 163, 74, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(79, 70, 229, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(249, 115, 22, 0.04) 0%, transparent 60%);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {

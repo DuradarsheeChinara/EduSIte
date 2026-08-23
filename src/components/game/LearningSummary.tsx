@@ -22,15 +22,7 @@ export function LearningSummary({ subject, score, maxScore, onReturnHome }: Lear
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
       className="min-h-screen flex items-center justify-center p-4"
-      style={{
-        background: world.environment === 'garden' ? 'linear-gradient(135deg, #F0FDF4, #DCFCE7)'
-          : world.environment === 'laboratory' ? 'linear-gradient(135deg, #FFF7ED, #FED7AA)'
-          : world.environment === 'powerstation' ? 'linear-gradient(135deg, #FDF4F0, #FAE5DC)'
-          : world.environment === 'council' ? 'linear-gradient(135deg, #EEF2FF, #E0E7FF)'
-          : world.environment === 'workshop' ? 'linear-gradient(135deg, #F0FDFA, #CCFBF1)'
-          : world.environment === 'bridge' ? 'linear-gradient(135deg, #FFF7ED, #FED7AA)'
-          : 'linear-gradient(135deg, #F0FDFA, #CCFBF1)',
-      }}
+      style={{ background: 'transparent' }}
     >
       <div className="max-w-lg w-full">
         <motion.div
