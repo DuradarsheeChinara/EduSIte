@@ -192,7 +192,7 @@ export function MissionShell({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.4 }}
-              className="min-h-[calc(100vh-100px)] flex items-center justify-center p-4 pt-32 sm:pt-28"
+              className="min-h-[calc(100vh-100px)] flex items-start justify-center p-4 pt-32 sm:pt-28"
             >
               <div className="w-full max-w-3xl">{children}</div>
             </motion.div>
